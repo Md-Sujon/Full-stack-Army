@@ -8,7 +8,7 @@ function uuidv4() {
     });
   }
   
-  console.log(uuidv4());
+//   console.log(uuidv4());
 
 /**
  * This is Array
