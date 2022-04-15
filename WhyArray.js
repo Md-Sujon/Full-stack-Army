@@ -27,3 +27,4 @@ delete arrayToObj[400000]
 console.timeEnd('Object') //Operation Time Check End
 
 // console.log(array.length);
+
