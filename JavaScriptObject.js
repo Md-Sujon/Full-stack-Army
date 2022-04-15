@@ -63,7 +63,7 @@ student[idToBeData] = {
 }
 
 //Delete
-// delete student[idToBeData];
+delete student[idToBeData];
 
 // Traverser
 //Option one
