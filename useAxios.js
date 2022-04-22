@@ -15,6 +15,7 @@ async function getData(){
      */
    
     //Array data convert Object
+    //Array data convert Object
     const result = data.slice(0, 11).reduce((acc, cur) =>{
         acc [cur.id] = {...cur};
         delete acc[cur.id].body;
