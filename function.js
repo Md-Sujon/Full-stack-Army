@@ -1,4 +1,6 @@
 
+/**
+ 
 function sleep(name){
 console.log(`${name} is sleeping`);
 }
@@ -36,19 +38,21 @@ function jobHolderLifecycle(name){
     eat(name, "dinner");
     sleep(name);
 }
+ */
 
-jobHolderLifecycle("sujon");
-console.log("----------------------------------------------------------------");
-jobHolderLifecycle("smita")
-console.log("----------------------------------------------------------------");
-jobHolderLifecycle("Rakib")
-console.log("----------------------------------------------------------------");
-jobHolderLifecycle("Robin")
-console.log("----------------------------------------------------------------");
-jobHolderLifecycle("Sumi")
+// jobHolderLifecycle("sujon");
+// console.log("----------------------------------------------------------------");
+// jobHolderLifecycle("smita")
+// console.log("----------------------------------------------------------------");
+// jobHolderLifecycle("Rakib")
+// console.log("----------------------------------------------------------------");
+// jobHolderLifecycle("Robin")
+// console.log("----------------------------------------------------------------");
+// jobHolderLifecycle("Sumi")
 
 
 
+/**
 function StudentLifecycle(name){
     awake(name);
     eat(name, "breakfast")
@@ -58,11 +62,13 @@ function StudentLifecycle(name){
     eat(name, "dinner");
     sleep(name);
 }
-StudentLifecycle('Alifa')
-console.log("---------------------");
-StudentLifecycle('Akhi')
-console.log("---------------------");
-StudentLifecycle('Bilkish')
+ */
+
+// StudentLifecycle('Alifa')
+// console.log("---------------------");
+// StudentLifecycle('Akhi')
+// console.log("---------------------");
+// StudentLifecycle('Bilkish')
 
 
 
@@ -89,3 +95,54 @@ function test_function(a,b=5){
     console.log(result);
 }
 test_function(c);
+
+//Return Function
+/**
+function sum(a,b){
+    return a+b;
+}
+
+function sub(a,b){
+    return a-b;
+}
+ +
+function time(a,b){
+    return a*b;
+}
+
+const a = 10;
+const b = 20;
+
+const r1 = sum(a, b);
+
+const r2 = sub(a, b);
+
+const r = Math.abs(time(sum(a, b), sub(a, b)));
+console.log(r);
+ */
+
+
+// Prove --> Function is a value
+
+function testFunction(){
+    console.log('i am test function');
+}
+
+const fn = testFunction;
+fn();
+
+
+const fData = {
+    prams : ['a', 'b'],
+    body : [
+        'const r = a+b',
+        'return r'
+    ]
+};
+
+const fBody = fData.body.reduce((accumulator, current) => {
+    accumulator += current+ ';';
+    return accumulator;
+}, '');
+
+console.log(fBody);
