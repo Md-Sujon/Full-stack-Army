@@ -74,27 +74,27 @@ function StudentLifecycle(name){
 
 
 
-function name_of_function(){
-    //function body
+// function name_of_function(){
+//     //function body
 
-    //you can write any valid js code here
+//     //you can write any valid js code here
 
-    // return a result
-}
+//     // return a result
+// }
 
 //There are two steps
 
 //-Define a function
 
 // -Invoke a function
-  const c = 100;
-function test_function(a,b=5){
-    // const a = 10;
-    // const b = 20;
-    const result = a + b;
-    console.log(result);
-}
-test_function(c);
+//   const c = 100;
+// function test_function(a,b=5){
+//     // const a = 10;
+//     // const b = 20;
+//     const result = a + b;
+//     console.log(result);
+// }
+// test_function(c);
 
 //Return Function
 /**
@@ -124,25 +124,60 @@ console.log(r);
 
 // Prove --> Function is a value
 
-function testFunction(){
-    console.log('i am test function');
-}
+// function testFunction(){
+//     console.log('i am test function');
+// }
 
-const fn = testFunction;
-fn();
+// const fn = testFunction;
+// fn();
 
 
-const fData = {
-    prams : ['a', 'b'],
-    body : [
-        'const r = a+b',
-        'return r'
-    ]
-};
+// const fData = {
+//     prams : ['a', 'b'],
+//     body : [
+//         'const r = a+b',
+//         'return r'
+//     ]
+// };
 
-const fBody = fData.body.reduce((accumulator, current) => {
-    accumulator += current+ ';';
-    return accumulator;
-}, '');
+// const fBody = fData.body.reduce((accumulator, current) => {
+//     accumulator += current+ ';';
+//     return accumulator;
+// }, '');
 
-console.log(fBody);
+// console.log(fBody);
+
+// const tF = new Function(...fData.prams, fBody);
+
+// console.log(tF(500, 1000));
+
+
+const operation = [
+    {
+        args : [10,20],
+        prams:['a','b'],
+        body:[
+            'console.log("a+b=", a+b)',
+        ]
+
+    },
+    {
+        args : [30,40],
+        prams:['a','b'],
+        body:'console.log("a-b=", a-b)',
+        
+
+    },
+    {
+        args : [90,20],
+        prams:['a','b'],
+        body:'console.log("a*b=", a*b)',
+        
+
+    },
+]
+
+operation.forEach(operations =>{
+const fn = new Function(...operations.prams, ...operations.body);
+fn(...operations.args)
+})
